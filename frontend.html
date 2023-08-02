@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sahara Sun</h2>
+
+<input type="text" id="city" name="city">
+<button type="button" onclick="getWeather()">Get Temperature</button>
+
+<p id="temperature"></p>
+
+<script>
+function getWeather() {
+  var city = document.getElementById("city").value;
+  fetch('http://127.0.0.1:5000/weather?city=' + city)
+    .then(response => response.json())
+    .then(data => document.getElementById("temperature").innerHTML = data.temperature);
+}
+</script>
+
+</body>
+</html>
