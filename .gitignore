@@ -1,4 +1,5 @@
 creds/
 env/
 .vscode/
-
+.env
+frontend/node_modules
